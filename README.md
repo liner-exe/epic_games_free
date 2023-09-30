@@ -1,45 +1,24 @@
-# EpicGamesFree-Parsing
+# epic_games_free
 
-<details>
-  <summary>Link to backend of free games on EGS</summary>
-  https://store-site-backend-static-ipv4.ak.epicgames.com/freeGamesPromotions?locale=en&country=US&allowCountries=US
-</details>
-<br>
+![Epic Games Logo Free Games](https://i.imgur.com/sVCAdZK.png)
 
-## 📚 ABOUT
-This repo shows how to parse free games of Epic Games.
-<br>
-
-## ❓ EXAMPLE OF USAGE
-Also have in main.py
-<br><br>
-
-**get_info**
-```python
-from examples import get_info
-
-data = get_info()
-for i in range(len(data)):
-    print('GAME TITLE', data[i][0])
-    print('GAME DESCRIPTION', data[i][1])
-    print('OFFER TYPE', data[i][2])
-    print('ORIGINAL PRICE', data[i][3])
-    print('DISCOUNT PRICE', data[i][4])
-    print('PRODUCT SLUG', data[i][5])
-    print('IMG URL', data[i][6])
-    print()
+## installation
+```shell
+pip install epic-games-free
 ```
 
-## 📖 RETURN TYPES
-* get_title - str
-* get_titles - tuple
-* get_info - tuple[tuple[any, any, any, any, any, any, any]]
+## Example of usage
+```py
+from epic_games_free import EpicGames
 
-## 🤝 CONTRIBUTE
-If you would like to contribute to this project, fork it and then create a pull request.
-Please ensure checked code.
+with EpicGames() as epic_games:
+    print(epic_games.get_info_all_games())
+```
 
-## ❗ NOTICE
+## Dependencies
 
-> [!NOTE]
-> It\`s unnofficial way to parse free games on EGS. But the [backend](https://store-site-backend-static-ipv4.ak.epicgames.com/freeGamesPromotions?locale=ru&country=US&allowCountries=US) is official. This code isn`t relate to Epic Games
+[Python >=3.10](https://www.python.org/downloads/release/python-310)
+
+## License
+
+[MIT](http://en.wikipedia.org/wiki/MIT_License)
