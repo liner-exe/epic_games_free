@@ -1,0 +1,6 @@
+include README.md
+include LICENSE
+include requirements.txt
+include epic_games_free/epic_games.py
+include epic_games_free/utils.py
+include epic_games_free/__init__.py
